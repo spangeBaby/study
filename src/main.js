@@ -1,18 +1,17 @@
-
-import './lib/mui/css/icons-extra.css'
-import './lib/mui/css/mui.min.css'
-import 'mint-ui/lib/style.css'
-import router from './router/router'
 import Vue from 'vue'
-import App from './App'
 import Router from 'vue-router'
 Vue.use(Router)
 import Resource from 'vue-resource'
 Vue.use(Resource)
-import { Header, Swipe, SwipeItem } from 'mint-ui'
-Vue.component(Header.name, Header)
-Vue.component(Swipe.name, Swipe)
-Vue.component(SwipeItem.name, SwipeItem)
+Vue.http.options.root= 'https://locally.uieee.com'
+Vue.http.options.emulateJSON = true
+import Mui from 'mint-ui'
+Vue.use(Mui)
+import App from './App'
+import './lib/mui/css/icons-extra.css'
+import 'mint-ui/lib/style.css'
+import router from './router/router'
+import './lib/mui/css/mui.min.css'
 Vue.config.productionTip = false
 
 new Vue({
